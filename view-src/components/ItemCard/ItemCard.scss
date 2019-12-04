@@ -1,0 +1,82 @@
+.itemcard {
+    margin-top: 0.57vw;
+    width: 100%;
+    border: 1px solid #414141;
+    border-radius: 4px;
+    background-color: #252526;
+    color: #989898;
+    font-variant: tabular-nums;
+    &-header {
+        display: flex;
+        justify-content: space-between;
+        padding: 1.6vh 2.28vw;
+        border-bottom: 1px solid #414141;
+        background-color: #2d2d2d;
+        &-left {
+            &-package {
+                margin-right: 0.28vw;
+                font-size: 16px;
+                color: #249edc;
+            }
+            &-author {
+                margin-left: 0.28vw;
+            }
+        }
+        &-right {
+            display: flex;
+            align-items: center;
+            img {
+                width: 1.2vw;
+                margin-right: 0.5vw;
+            }
+        }
+    }
+    &-body {
+        padding: 1.6vh 2.28vw;
+        text-align: left;
+        &-desc {
+            font-size: 14px;
+        }
+        &-tags {
+            display: flex;
+            align-items: center;
+            margin-top: 0.84vh;
+            img {
+                width: 1.5vw;
+                min-width: 21px;
+                margin-right: 0.5vw;
+            }
+            .tag {
+                margin-right: 0.4vw;
+                color: #249edc;
+                cursor: pointer;
+                user-select: none;
+                &:last-child {
+                    margin-right: 0;
+                }
+                &:hover {
+                    color: #80cdf3;
+                }
+            }
+        }
+        &-install {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1.6vh;
+            button {
+                padding: 8px 12px;
+                border: 0;
+                border-radius: 0.28vw;
+                background-color: #249edc;
+                color: #fff;
+                outline: none;
+                cursor: pointer;
+                &:hover {
+                    transition: 0.2s;
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+}

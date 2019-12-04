@@ -1,0 +1,19 @@
+.error {
+    &-title {
+        font-size: 4vw;
+        font-family: "ProximaNovaRgBold","Helvetica Neue",helvetica,arial,sans-serif;
+        color: #fff;
+    }
+    &-logo {
+        height: 4vw;
+    }
+    &-info {
+        font-size: 1vw;
+        font-weight: 500;
+        color: #989898;
+        span {
+            color: #249edc;
+            cursor: pointer;
+        }
+    }
+}

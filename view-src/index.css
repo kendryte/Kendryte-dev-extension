@@ -1,0 +1,21 @@
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #1e1e1e;
+  font-size: 12px;
+  font-family: "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: #1e1e1e;
+}
+
+/* .vscode-light ::-webkit-scrollbar-corner {
+  background-color: #fff;
+} */

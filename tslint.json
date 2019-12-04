@@ -1,0 +1,20 @@
+{
+	"rules": {
+		"no-string-throw": true,
+		"no-unused-expression": true,
+		"no-duplicate-variable": true,
+		"curly": true,
+		"class-name": true,
+		"semicolon": [
+			false,
+			"always"
+		],
+		"triple-equals": true,
+		"react-hooks/rules-of-hooks": "error",
+		"react-hooks/exhaustive-deps": "warn"
+	},
+	"defaultSeverity": "warning",
+	"plugins": [
+		"react-hooks"
+	  ]
+}

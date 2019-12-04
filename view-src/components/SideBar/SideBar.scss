@@ -1,0 +1,44 @@
+.side-bar {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 5vw;
+    min-width: 70px;
+    max-width: 90px;
+    height: 100vh;
+    background: rgb(50, 50, 50);
+    .side-bar-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 5vw;
+        min-height: 70px;
+        max-height: 90px;
+        opacity: 0.5;
+        &.top {
+            opacity: 1;
+        }
+        &.current {
+            opacity: 1;
+            background-color: #249edc;
+        }
+        .kendryte {
+            width: 2.85vw;
+            min-width: 40px;
+            max-width: 50px;
+        }
+        img {
+            width: 1.71vw;
+            min-width: 24px;
+            max-width: 30px;
+        }
+        span {
+            color: #fff;
+        }
+    }
+    .side-bar-item:hover {
+        transition: 0.2s;
+        opacity: 1;
+        cursor: pointer;
+    }
+}

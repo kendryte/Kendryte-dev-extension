@@ -1,0 +1,41 @@
+{
+	"compilerOptions": {
+		"types": [
+			"glob",
+			"jszip",
+			"json5",
+			"lodash",
+			"minimatch",
+			"module-alias",
+			"node",
+			"prop-types",
+			"serialport",
+			"split2",
+			"node-7z"
+		],
+		"experimentalDecorators": true,
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"allowSyntheticDefaultImports": true,
+		"target": "es6",
+		"outDir": "../build",
+		"lib": [
+			"es6",
+			"webworker"
+		],
+		"sourceMap": true,
+		"strict": true,
+		"baseUrl": ".",
+		"paths": {
+			"@command/*": ["command/*"],
+			"@utils/*": ["utils/*"],
+			"@debug/*": ["debug/*"],
+			"@service/*": ["service/*"],
+			"@common/*": ["common/*"],
+			"@treeview/*": ["views/*"]
+		}
+	},
+	"include": [
+		"*"
+	]
+}

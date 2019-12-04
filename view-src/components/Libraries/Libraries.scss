@@ -1,0 +1,39 @@
+.libraries {
+    flex-grow: 1;
+    padding: 4vh 8vw;
+    overflow: scroll;
+    &-input {
+        margin-bottom: 2.28vw;
+        input {
+            box-sizing: border-box;
+            width: 100%;
+            min-width: 900px;
+            height: 3.8vh;
+            min-height: 30px;
+            padding: 0.6vh 0.857vw;
+            border: 1px solid #6c6c6c;
+            border-radius: 4px;
+            background-color: #2d2d2d;
+            color: #989898;
+            &:focus {
+                border-color: #249edc;
+                transition: 0.2s;
+                outline: none;
+            }
+        }
+    }
+    &-list {
+        min-width: 900px;
+        .loading {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            color: #989898;
+            span {
+                margin-top: 2.8vh;
+            }
+        }
+    }
+}

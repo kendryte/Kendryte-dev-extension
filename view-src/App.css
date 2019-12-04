@@ -1,0 +1,16 @@
+.App {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  text-align: center;
+}
+
+.container {
+  flex-grow: 1;
+  overflow: scroll;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

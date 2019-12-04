@@ -1,0 +1,119 @@
+{
+    "description": "Kendryte package schema",
+    "definitions": {
+        "schemaArray": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "$ref": "#" }
+        },
+        "positiveInteger": {
+            "type": "integer",
+            "minimum": 0
+        },
+        "positiveIntegerDefault0": {
+            "allOf": [ { "$ref": "#/definitions/positiveInteger" }, { "default": 0 } ]
+        },
+        "simpleTypes": {
+            "enum": [ "array", "boolean", "integer", "null", "number", "object", "string" ]
+        },
+        "stringArray": {
+            "type": "array",
+            "items": { "type": "string" },
+            "minItems": 1,
+            "uniqueItems": true
+        }
+    },
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "Project name"
+        },
+        "version": {
+            "type": "string",
+            "description": "Project version"
+        },
+        "type": {
+            "type": "string",
+            "enum": ["executable", "library"],
+            "description": "Project type. 'executable', 'library' can be selected."
+        },
+        "dependencies": {
+            "type": "object",
+            "description": "Dependencies of project"
+        },
+        "include": {
+            "type": "array",
+            "description": "Include a directories named 'include'"
+        },
+        "includeFolders": {
+            "type": "array",
+            "description": "Inclue a folder"
+        },
+        "source": {
+            "type": "array",
+            "description": "Source files. File wildcard character can be used."
+        },
+        "header": {
+            "type": "array",
+            "description": "CMakeLists header"
+        },
+        "homepage": {
+            "type": "string",
+            "description": "Project homepage"
+        },
+        "definitions": {
+            "type": "object",
+            "description": "Cmake target compile definitions"
+        },
+        "extraList": {
+            "type": "string",
+            "description": "Extra CMakeLists file"
+        },
+        "properties": {
+            "type": "object",
+            "description": "Cmake target compile properties"
+        },
+        "c_flags": {
+            "type": "array",
+            "description": "Set compile .c file flags"
+        },
+        "cpp_flags": {
+            "type": "array",
+            "description": "Set compile .cpp file flags"
+        },
+        "c_cpp_flags": {
+            "type": "array",
+            "description": "Set compile .c and .cpp file flags"
+        },
+        "link_flags": {
+            "type": "array",
+            "description": "Set cmake link flags"
+        },
+        "ld_file": {
+            "type": "string",
+            "description": "Set .ld file path"
+        },
+        "linkArgumentPrefix": {
+            "type": "array",
+            "description": "Set cmake link argument prefix"
+        },
+        "linkArgumentSuffix": {
+            "type": "array",
+            "description": "Set cmake link argument suffix"
+        },
+        "systemLibrary": {
+            "type": "array",
+            "description": "Set system library path"
+        },
+        "debug": {
+            "type": "boolean",
+            "description": "Set Debug mode"
+        }
+    },
+    "dependencies": {
+        "exclusiveMaximum": [ "maximum" ],
+        "exclusiveMinimum": [ "minimum" ]
+    },
+    "default": {}
+}

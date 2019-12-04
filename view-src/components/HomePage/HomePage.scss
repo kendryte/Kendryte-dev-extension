@@ -1,0 +1,76 @@
+.homepage {
+    // min-width: 900px;
+    padding: 8vh 8vw 0;
+    color: #fff;
+    overflow: scroll;
+    &-main {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        &-quickaccess {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 22px;
+            font-weight: 500;
+            color: #ccc;
+            text-align: left;
+            .accesses {
+                margin-top: 2.5vh;
+                button {
+                    box-sizing: border-box;
+                    display: flex;
+                    align-items: center;
+                    width: 17.85vw;
+                    min-width: 250px;
+                    height: 2.85vw;
+                    min-height: 40px;
+                    margin-bottom: 1.25vh;
+                    padding: 0 15px;
+                    border: 1px solid #6c6c6c;
+                    border-radius: 4px;
+                    background: transparent;
+                    color: #989898;
+                    font-size: 16px;
+                    outline: none;
+                    img {
+                        width: 1.14vw;
+                        min-width: 16px;
+                        margin-right: 0.6vw;
+                        filter: grayscale(100%);
+                    }
+                    &:hover {
+                        border-color: #249edc;
+                        color: #249edc;
+                        cursor: pointer;
+                        transition: 0.2s;
+                        img {
+                            filter: grayscale(0%);
+                            transition: 0.2s;
+                        }
+                    }
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+        img {
+            width: 256px;
+        }
+        &-version {
+            margin-top: 1.6vh;
+            color: #989898;
+            font-size: 16px;
+            user-select: none;
+            span {
+                margin-left: 6px;
+                padding: 2px 4px;
+                background: #fff;
+                border-radius: 4px;
+                color: #000;
+                font-weight: 700;
+            }
+        }
+    }
+}
