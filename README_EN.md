@@ -156,5 +156,6 @@ sudo yum install libftdi hidapi libusb
 - [ ] Move `serialport` and `bindings` lib from `node_modules` to `src`.
 - [ ] Webview panel listen to React local development server on development mode.
 - [ ] Add pin visual configuration.
+- [ ] Add CI/CD
 - [ ] Release `0.2.0` version. (2020.02)
 - [ ] Support `K510`. (2020 Q2)

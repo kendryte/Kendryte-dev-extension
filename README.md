@@ -165,5 +165,6 @@ sudo yum install libftdi hidapi libusb
 - [ ] 将 serialport 以及 bindings 库移出 node_modules 以保证跨平台可用。
 - [ ] 添加开发模式下 Webview panel 直接监听本地 React 开发服务器功能。
 - [ ] 增加引脚可视化配置。
+- [ ] 添加 CI/CD
 - [ ] 发布 0.2.0 版本。(2020.02)
 - [ ] 增加支持二代 K510 芯片。(2020 Q2)
