@@ -3,8 +3,8 @@
 [中文版](./README.md)
 
 - [Prepare](#Prepare)
-- [Quick Start](#Quick Start)
-- [Directory Structure](#Directory Structure)
+- [Quick Start](#QuickStart)
+- [Directory Structure](#DirectoryStructure)
 - [Features](#Features)
 - [Questions](#Questions)
   - [Windows](#Windows)
@@ -59,7 +59,7 @@ sudo yum install libftdi hidapi libusb
     sudo usermod -aG plugdev $USER
   ```
 
-## Quick Start
+## QuickStart
 
 1.Kendryte controller will open after installed, click `Examples` tag to switch to the examples store.
 
@@ -75,7 +75,7 @@ sudo yum install libftdi hidapi libusb
 
 4.Check the board
 
-## Directory Structure
+## DirectoryStructure
 
 ``` Bash  
 .
