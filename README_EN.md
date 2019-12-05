@@ -63,15 +63,15 @@ sudo yum install libftdi hidapi libusb
 
 1.Kendryte controller will open after installed, click `Examples` tag to switch to the examples store.
 
-![image](./resources/readme/en/quick-start/quick-1.png)
+![image](https://raw.githubusercontent.com/kendryte/Kendryte-dev-extension/master/resources/readme/en/quick-start/quick-1.png)
 
 2.Select an example and download.
 
-![image](./resources/readme/en/quick-start/quick-2.png)
+![image](https://raw.githubusercontent.com/kendryte/Kendryte-dev-extension/master/resources/readme/en/quick-start/quick-2.png)
 
 3.Click the `build and upload` button for build and upload to board.
 
-![image](./resources/readme/en/quick-start/quick-3.png)
+![image](https://raw.githubusercontent.com/kendryte/Kendryte-dev-extension/master/resources/readme/en/quick-start/quick-3.png)
 
 4.Check the board
 
@@ -125,9 +125,9 @@ sudo yum install libftdi hidapi libusb
 
 ## Features
 
-![image](./resources/readme/en/full-screen.png)
+![image](https://raw.githubusercontent.com/kendryte/Kendryte-dev-extension/master/resources/readme/en/full-screen.png)
 
-![image](./resources/readme/en/status-bar.png)
+![image](https://raw.githubusercontent.com/kendryte/Kendryte-dev-extension/master/resources/readme/en/status-bar.png)
 
 ## Questions
 
@@ -143,8 +143,18 @@ sudo yum install libftdi hidapi libusb
 
 1. Q: Openocd report error: libusb_error_access?
 
-    A: Please read [Debugger permission](#Debugger\ permission) to get the debugger permission and plug in device again. If you still have this problem, please contact us on issue.
+    A: Please read [Debugger permission](#Debugger\ permission) to get the debugger permission and plug in device again. If you still have this problem, please contact us on [issue](https://github.com/kendryte/Kendryte-dev-extension/issues).
 
 2. Q: Why extension request sudo permission on upload?
 
     A: If current don't have permission to read serialport device, it will request sudo permission. You can also config serialport devices permission by yourself.
+
+## Roadmap
+
+- [ ] Release `0.1.0` version. (2019.12.09)
+- [ ] Serialport arguments configurable.
+- [ ] Move `serialport` and `bindings` lib from `node_modules` to `src`.
+- [ ] Webview panel listen to React local development server on development mode.
+- [ ] Add pin visual configuration.
+- [ ] Release `0.2.0` version. (2020.02)
+- [ ] Support `K510`. (2020 Q2)

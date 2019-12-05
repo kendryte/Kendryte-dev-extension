@@ -68,15 +68,15 @@ sudo yum install libftdi hidapi libusb
 
 1.启动插件后，Kendryte 控制台会自动弹出，点击 Examples 切换至示例项目商店。
 
-![image](./resources/readme/quick-start/quick-1.jpeg)
+![image](https://raw.githubusercontent.com/kendryte/Kendryte-dev-extension/master/resources/readme/quick-start/quick-1.jpeg)
 
 2.选择一个项目下载至本地并打开。
 
-![image](./resources/readme/quick-start/quick-2.jpeg)
+![image](https://raw.githubusercontent.com/kendryte/Kendryte-dev-extension/master/resources/readme/quick-start/quick-2.jpeg)
 
 3.点击状态栏中的编译并上传将项目通过串口烧写至开发板。
 
-![image](./resources/readme/quick-start/quick-3.jpeg)
+![image](https://raw.githubusercontent.com/kendryte/Kendryte-dev-extension/master/resources/readme/quick-start/quick-3.jpeg)
 
 4.在开发板上查看效果。
 
@@ -130,13 +130,13 @@ sudo yum install libftdi hidapi libusb
 
 ## 界面功能介绍
 
-![image](./resources/readme/full-screen.png)
+![image](https://raw.githubusercontent.com/kendryte/Kendryte-dev-extension/master/resources/readme/full-screen.png)
 
-![image](./resources/readme/status-bar.png)
+![image](https://raw.githubusercontent.com/kendryte/Kendryte-dev-extension/master/resources/readme/status-bar.png)
 
-![image](./resources/readme/kendryte-index.png)
+![image](https://raw.githubusercontent.com/kendryte/Kendryte-dev-extension/master/resources/readme/kendryte-index.png)
 
-![image](./resources/readme/kendryte-lib.png)
+![image](https://raw.githubusercontent.com/kendryte/Kendryte-dev-extension/master/resources/readme/kendryte-lib.png)
 
 ## 常见问题
 
@@ -144,7 +144,7 @@ sudo yum install libftdi hidapi libusb
 
 1. Q: 为什么调试时启动 Openocd 报错 libusb_error_not_supported ？
 
-    A: 请下载[Zadig](https://zadig.akeo.ie/)将 JLink 驱动转为 Libusb。
+    A: 请下载 [Zadig](https://zadig.akeo.ie/) 将 JLink 驱动转为 Libusb。
 
 ### MacOS
 
@@ -152,8 +152,18 @@ sudo yum install libftdi hidapi libusb
 
 1. Q: 为什么调试启动 Openocd 报错 libusb_error_access ？
 
-    A: 请根据上文[配置调试器权限](#配置调试器权限)来获取调试器权限并重新接入调试设备。如果问题仍未解决，请在 issue 中联系我们。
+    A: 请根据上文[配置调试器权限](#配置调试器权限)来获取调试器权限并重新接入调试设备。如果问题仍未解决，请在 [issue](https://github.com/kendryte/Kendryte-dev-extension/issues) 中联系我们。
 
 2. Q: 为什么烧写时需要 sudo 权限密码？
 
     A: 只有当前用户没有读取串口设备权限时才会出现需要密码，您也可以自行配置串口设备权限组。
+
+## Roadmap
+
+- [ ] 发布 0.1.0 preview 版本。(2019.12.09)
+- [ ] 串口参数可配置。
+- [ ] 将 serialport 以及 bindings 库移出 node_modules 以保证跨平台可用。
+- [ ] 添加开发模式下 Webview panel 直接监听本地 React 开发服务器功能。
+- [ ] 增加引脚可视化配置。
+- [ ] 发布 0.2.0 版本。(2020.02)
+- [ ] 增加支持二代 K510 芯片。(2020 Q2)
