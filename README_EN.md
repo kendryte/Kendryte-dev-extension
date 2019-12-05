@@ -3,8 +3,8 @@
 [中文版](./README.md)
 
 - [Prepare](#Prepare)
-- [Quick Start](#Quick\ Start)
-- [Directory Structure](#Directory\ Structure)
+- [Quick Start](#Quick Start)
+- [Directory Structure](#Directory Structure)
 - [Features](#Features)
 - [Questions](#Questions)
   - [Windows](#Windows)
