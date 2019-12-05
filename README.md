@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/badge/license-Apache%202-blue)](https://raw.githubusercontent.com/kendryte/Kendryte-dev-extension/master/LICENSE)
 ![Version](https://img.shields.io/badge/Version-preview-green)
 
-[English](./README_EN.md)
+[English](https://raw.githubusercontent.com/kendryte/Kendryte-dev-extension/master/README_EN.md)
 
 - [使用准备](#使用准备)
 - [快速开始](#快速开始)

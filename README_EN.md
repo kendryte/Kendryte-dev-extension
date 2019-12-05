@@ -1,6 +1,6 @@
 # Kendryte Dev Tool for Visual Studio Code
 
-[中文版](./README.md)
+[中文版](https://raw.githubusercontent.com/kendryte/Kendryte-dev-extension/master/README.md)
 
 - [Prepare](#Prepare)
 - [Quick Start](#QuickStart)
