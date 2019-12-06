@@ -4,7 +4,7 @@
   "description": "A develop tool for kendryte chip.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kendryte/Kendryte-dev-extension"
+    "url": "https://github.com/kendryte/Kendryte-dev-extension.git"
   },
   "icon": "resources/kendryte.png",
   "license": "SEE LICENSE IN LICENSE",
