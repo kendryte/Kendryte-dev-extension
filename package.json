@@ -2,14 +2,27 @@
   "name": "k210-extension",
   "displayName": "Kendryte Dev Tools",
   "description": "A develop tool for kendryte chip.",
-  "icon": "https://raw.githubusercontent.com/kendryte/Kendryte-dev-extension/master/resources/kendryte.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kendryte/Kendryte-dev-extension"
+  },
+  "icon": "resources/kendryte.png",
+  "license": "SEE LICENSE IN LICENSE",
+  "keywords": [
+    "Risc-v",
+    "riscv",
+    "kendryte",
+    "k210",
+    "canaan"
+  ],
   "publisher": "Kendryte",
-  "repository": "https://github.com/kendryte/Kendryte-dev-extension",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "engines": {
     "vscode": "^1.40.0"
   },
   "categories": [
+    "Debuggers",
+    "Extension Packs",
     "Other"
   ],
   "activationEvents": [
