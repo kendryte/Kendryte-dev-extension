@@ -2,8 +2,9 @@
   "name": "k210-extension",
   "displayName": "Kendryte Dev Tools",
   "description": "A develop tool for kendryte chip.",
+  "icon": "https://raw.githubusercontent.com/kendryte/Kendryte-dev-extension/master/resources/kendryte.png",
   "publisher": "Kendryte",
-  "repository": "https://git.b-bug.org/linzhanjie_intern/k210-extension",
+  "repository": "https://github.com/kendryte/Kendryte-dev-extension",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.40.0"
