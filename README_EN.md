@@ -10,6 +10,7 @@
   - [Windows](#Windows)
   - [MacOS](#MacOS)
   - [Linux](#Linux)
+- [Roadmap](#Roadmap)
 
 ## Prepare
 
