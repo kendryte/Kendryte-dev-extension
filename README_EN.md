@@ -1,5 +1,8 @@
 # Kendryte Dev Tool for Visual Studio Code
 
+[![License](https://img.shields.io/badge/license-Apache%202-blue)](https://raw.githubusercontent.com/kendryte/Kendryte-dev-extension/master/LICENSE)
+![Version](https://img.shields.io/badge/Version-0.1.0-green)
+
 [中文版](https://raw.githubusercontent.com/kendryte/Kendryte-dev-extension/master/README.md)
 
 - [Prepare](#Prepare)
@@ -152,7 +155,7 @@ sudo yum install libftdi hidapi libusb
 
 ## Roadmap
 
-- [ ] Release `0.1.0` version. (2019.12.09)
+- [x] Release `0.1.0` version. (2019.12.09)
 - [ ] Serialport arguments configurable.
 - [ ] Move `serialport` and `bindings` lib from `node_modules` to `src`.
 - [ ] Webview panel listen to React local development server on development mode.

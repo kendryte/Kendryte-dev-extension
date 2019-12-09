@@ -1,7 +1,7 @@
 # Kendryte Dev Tool for Visual Studio Code
 
 [![License](https://img.shields.io/badge/license-Apache%202-blue)](https://raw.githubusercontent.com/kendryte/Kendryte-dev-extension/master/LICENSE)
-![Version](https://img.shields.io/badge/Version-preview-green)
+![Version](https://img.shields.io/badge/Version-0.1.0-green)
 
 [English](https://raw.githubusercontent.com/kendryte/Kendryte-dev-extension/master/README_EN.md)
 
@@ -161,7 +161,7 @@ sudo yum install libftdi hidapi libusb
 
 ## Roadmap
 
-- [ ] 发布 0.1.0 preview 版本。(2019.12.09)
+- [x] 发布 0.1.0 preview 版本。(2019.12.09)
 - [ ] 串口参数可配置。
 - [ ] 将 serialport 以及 bindings 库移出 node_modules 以保证跨平台可用。
 - [ ] 添加开发模式下 Webview panel 直接监听本地 React 开发服务器功能。

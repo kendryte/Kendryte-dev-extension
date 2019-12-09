@@ -2,6 +2,7 @@
 **/tsconfig.json
 **/tslint.json
 .DS_Store
+*.vsix
 src/
 view-src/
 .env

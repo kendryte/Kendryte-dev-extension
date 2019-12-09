@@ -1,5 +1,5 @@
 {
-  "name": "k210-extension",
+  "name": "kendryte-extension",
   "displayName": "Kendryte Dev Tools",
   "description": "A develop tool for kendryte chip.",
   "repository": {
