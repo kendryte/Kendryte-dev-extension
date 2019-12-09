@@ -118,15 +118,6 @@ sudo yum install libftdi hidapi libusb
      └── main.c
 ```
 
-- .vscode: 
-- CMakeLists.txt: 
-- build: 
-- config: 
-- detect.kmodel: 。
-- kendryte-package.json: 
-- kendryte_libraries: 
-- src: Source files.
-
 ## Features
 
 ![image](https://raw.githubusercontent.com/kendryte/Kendryte-dev-extension/master/resources/readme/en/full-screen.png)
