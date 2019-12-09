@@ -85,10 +85,10 @@ sudo yum install libftdi hidapi libusb
 
 ``` Bash  
 .
-├── .vscode
-├── CMakeLists.txt
+├── .vscode  # 自动生成的调试选项，编译命令以及配置文件目录，修改该目录文件不会生效，该目录文件会被覆写。
+├── CMakeLists.txt # 自动生成的 CMakeLists，手动修改不会生效，只能通过修改配置文件来更改生成内容。
 ├── README.md
-├── build
+├── build # 编译产物目录
 │   ├── CMakeCache.txt
 │   ├── CMakeFiles
 │   ├── Makefile
@@ -96,38 +96,29 @@ sudo yum install libftdi hidapi libusb
 │   ├── camera-standalone-driver
 │   ├── cmake_install.cmake
 │   ├── compile_commands.json
-│   ├── ${Project-name}
-│   ├── ${Project-name}.bin
+│   ├── ${Project-name} # 最终产物
+│   ├── ${Project-name}.bin # 最终产物
 │   ├── lcd-nt35310-standalone-driver
 │   ├── standalone-sdk
 │   └── w25qxx-standalone-driver
-├── config
-│   ├── device-manager.json
-│   ├── flash-manager.h
-│   ├── flash-manager.json
-│   ├── fpioa-config.c
-│   ├── fpioa-config.h
+├── config // 引脚配置，模型地址分配地址配置目录，可以自行修改里面的配置文件。
+│   ├── device-manager.json # 模型地址分配
+│   ├── flash-manager.h # 模型地址分配
+│   ├── flash-manager.json # 模型地址分配
+│   ├── fpioa-config.c # 引脚配置
+│   ├── fpioa-config.h # 引脚配置
 │   └── ide-hook-main.c
-├── detect.kmodel
-├── kendryte-package.json
-├── kendryte_libraries
+├── detect.kmodel # Kendryte 模型文件，可以利用 nncase 来对 tensorflow lite 等模型转换成 kmodel
+├── kendryte-package.json # 项目配置文件
+├── kendryte_libraries # 项目依赖目录，所有依赖都安装在这里，通常不应该修改该目录下的内容
 │   ├── ai_image
 │   ├── camera-standalone-driver
 │   ├── lcd-nt35310-standalone-driver
 │   ├── standalone-sdk
 │   └── w25qxx-standalone-driver
-└──  src
+└──  src # 源码目录
      └── main.c
 ```
-
-- .vscode: 该目录中内容为自动生成，包含了调试选项，编译命令以及一系列插件直接使用的配置文件。
-- CMakeLists.txt: 该文件为插件编译时自动生成的 CMakelists 文件
-- build: 该目录中内容为编译产物，其中 ${Project-name} 以及 ${Project-name}.bin 为编译出的最终文件。
-- config: 该目录中包含开发板中的引脚配置，模型地址分配配置，内容可修改。
-- detect.kmodel: Kendryte 专属模型文件。
-- kendryte-package.json: 项目配置文件，包含项目名，source 文件等基本信息，可修改。
-- kendryte_libraries: 该目录为依赖安装目录，所有的依赖都会安装到该目录下，安装后的依赖库可以直接调用，无需再手动配置 include。正常情况下不应该修改该目录中文件。
-- src: 项目源码目录。
 
 ## 界面功能介绍
 
