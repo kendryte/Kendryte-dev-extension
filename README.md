@@ -101,7 +101,7 @@ sudo yum install libftdi hidapi libusb
 │   ├── lcd-nt35310-standalone-driver
 │   ├── standalone-sdk
 │   └── w25qxx-standalone-driver
-├── config // 引脚配置，模型地址分配地址配置目录，可以自行修改里面的配置文件。
+├── config # 引脚配置，模型地址分配地址配置目录，可以自行修改里面的配置文件。
 │   ├── device-manager.json # 模型地址分配
 │   ├── flash-manager.h # 模型地址分配
 │   ├── flash-manager.json # 模型地址分配
