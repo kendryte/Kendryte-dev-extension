@@ -1,7 +1,4 @@
 {
-    "cdn": "http://kendryte-ide.s3-website.cn-northwest-1.amazonaws.com.cn/",
-    "third_party": "3rd-party/",
-    "package_version": "versions.json",
     "host": "http://mirrors-kendryte.s3.cn-northwest-1.amazonaws.com.cn/",
     "packages": "/package"
 }
