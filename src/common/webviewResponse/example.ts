@@ -1,5 +1,5 @@
 import * as vscode from 'vscode'
-import { downloadPackage, urlJoin, jszipUnarchive, systemFilter } from '@utils/index'
+import { downloadPackage, urlJoin, jszipUnarchive, systemFilter, sleep } from '@utils/index'
 import { readFileSync } from 'fs'
 import { join } from 'path'
 
@@ -20,7 +20,9 @@ export const installExample = (exampleName: string, extensionPath: string): Prom
                 const exampleUrl = urlJoin(host, 'example', `${exampleName}_0.1.0.zip`)
                 console.log(exampleUrl)
                 downloadPackage(path, exampleUrl, `${exampleName}.zip`)
-                    .then(() => {
+                    .then(async () => {
+                        // 添加延迟时间，确保在加密磁盘下或速度慢的磁盘中，Windows defender 扫描完毕文件后再进行解压。否则可能出现大文件解压时被锁，安装依赖失败。
+                        await sleep(1000)
                         jszipUnarchive(join(path, `${exampleName}.zip`), join(path, exampleName))
                             .then(async () => {
                                 if (vscode.workspace.rootPath) {

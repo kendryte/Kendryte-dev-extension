@@ -88,6 +88,7 @@ const downloadAndExtract = (packageName: string, url: string, remoteVersion: str
         // Main
         try {
             await downloadPackage(packagePath, url, url.replace(/(.*\/)*([^.]+)/i,"$2")) // 正则获取url尾部的文件名
+            // 添加延迟时间，确保在加密磁盘下或速度慢的磁盘中，Windows defender 扫描完毕文件后再进行解压。否则可能出现大文件解压时被锁，导致安装依赖失败。
             await sleep(1000)
             await unArchive(join(packagePath, url.replace(/(.*\/)*([^.]+)/i,"$2")), packagePath)
             chmodr(join(process.env['packagePath'] || '', packageName), 0o755, console.log)
