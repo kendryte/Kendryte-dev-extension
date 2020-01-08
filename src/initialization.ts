@@ -46,7 +46,7 @@ const installPackages = async (context: vscode.ExtensionContext, config: GlobalC
                     console.log(`No need to install ${packageData.projectName}`)
                     continue
                 }
-                const platform = systemFilter<PlatformPackage>(packageData.win32, <PlatformPackage>packageData.darwin, <PlatformPackage>packageData.linux)
+                const platform = systemFilter<PlatformPackage>(packageData.win32, packageData.darwin as PlatformPackage, packageData.linux as PlatformPackage)
                 remoteVersion = packageData.version
                 url = platform ? urlJoin(config.host, platform.source) : ''
             }
