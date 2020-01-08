@@ -1,6 +1,6 @@
 import * as vscode from 'vscode'
 import * as fs from 'fs'
-import { readdirPromisify } from '@utils/index'
+import { readdirPromisify, systemFilter } from '@utils/index'
 import { join } from 'path'
 
 const copyDir = (path: string, targetPath: string) => {
@@ -47,9 +47,10 @@ export const createNewProject = () => {
                     reject()
                     return
                 }
-                copyDir(join(process.env.packagePath, 'hello-world-project'), join(uri[0].path, 'hello-world'))
+                const path = systemFilter(uri[0].path.replace(/^\//, ''), uri[0].path, uri[0].path)
+                copyDir(join(process.env.packagePath, 'hello-world-project'), join(path, 'hello-world'))
                     .then(async () => {
-                        await vscode.commands.executeCommand('vscode.openFolder', vscode.Uri.file(join(uri[0].path, 'hello-world')), true)
+                        await vscode.commands.executeCommand('vscode.openFolder', vscode.Uri.file(join(path, 'hello-world')), true)
                         resolve()
                     })
                     .catch(err => reject(err))
