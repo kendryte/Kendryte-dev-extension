@@ -2,7 +2,7 @@ import * as vscode from 'vscode'
 import * as fs from 'fs'
 import Axios from 'axios'
 import * as os from 'os'
-import { setPackagePath, systemFilter, downloadPackage, unArchive, urlJoin } from '@utils/index'
+import { setPackagePath, systemFilter, downloadPackage, unArchive, urlJoin, sleep } from '@utils/index'
 import { PackageData, PlatformPackage, PackagesVersion, GlobalConfig } from './interface'
 import { join } from 'path'
 import * as chmodr from 'chmodr'
@@ -88,6 +88,7 @@ const downloadAndExtract = (packageName: string, url: string, remoteVersion: str
         // Main
         try {
             await downloadPackage(packagePath, url, url.replace(/(.*\/)*([^.]+)/i,"$2")) // 正则获取url尾部的文件名
+            await sleep(1000)
             await unArchive(join(packagePath, url.replace(/(.*\/)*([^.]+)/i,"$2")), packagePath)
             chmodr(join(process.env['packagePath'] || '', packageName), 0o755, console.log)
             packagesVersions[packageName] = remoteVersion
