@@ -16,7 +16,7 @@
     "canaan"
   ],
   "publisher": "Kendryte",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "engines": {
     "vscode": "^1.40.0"
   },
@@ -73,7 +73,7 @@
           },
           "JTag.speed": {
             "type": "number",
-            "default": 30000,
+            "default": 3000,
             "description": "khz"
           }
         }
@@ -83,7 +83,7 @@
         "properties": {
           "FTDI.speed": {
             "type": "number",
-            "default": 25000,
+            "default": 2500,
             "description": "khz"
           },
           "FTDI.vid_pid": {
