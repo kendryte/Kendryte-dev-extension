@@ -17,19 +17,19 @@ const createConfigContent = async (port: number): Promise<string> => {
     switch (type) {
         case 'JTag':
             return await createDefaultJTagConfig(port, {
-                speed: vscode.workspace.getConfiguration('JTag').get('speed') || 30000,
+                speed: vscode.workspace.getConfiguration('JTag').get('speed') || 3000,
                 serialNumber,
             })
         case 'FTDI':
             return await createDefaultFtdiConfig(port, {
-                speed: vscode.workspace.getConfiguration('FTDI').get('speed') || 25000,
+                speed: vscode.workspace.getConfiguration('FTDI').get('speed') || 2500,
                 layoutInit: vscode.workspace.getConfiguration('FTDI').get('layout') || '00e8 00eb',
                 vidPid: vscode.workspace.getConfiguration('FTDI').get('vid_pid') || '0403 6014',
                 tdoSampleFallingEdge: vscode.workspace.getConfiguration('FTDI').get('tdo-fe') || true
             })
         default:
             return await createDefaultJTagConfig(port, {
-                speed: vscode.workspace.getConfiguration('JTag').get('speed') || 30000,
+                speed: vscode.workspace.getConfiguration('JTag').get('speed') || 3000,
                 serialNumber,
             })
     }
@@ -52,7 +52,7 @@ const createDefaultJTagConfig = (port: number, options: JTagConfigExtra): string
         target create $_TARGETNAME riscv -chain-position $_TARGETNAME
         init
         halt
-    ` + '\n')
+    `)
 }
 const createDefaultFtdiConfig = (port: number, config: FtdiConfigExtra): string => {
     const [vid1, vid2] = config.vidPid.split(/\s/)
@@ -82,5 +82,5 @@ const createDefaultFtdiConfig = (port: number, config: FtdiConfigExtra): string 
             adapter_khz ${config.speed}
         }
         init
-    ` + '\n')
+    `)
 }
