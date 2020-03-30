@@ -1,7 +1,7 @@
 # Kendryte Dev Tool for Visual Studio Code
 
 [![License](https://img.shields.io/badge/license-Apache%202-blue)](https://raw.githubusercontent.com/kendryte/Kendryte-dev-extension/master/LICENSE)
-![Version](https://img.shields.io/badge/Version-0.1.0-green)
+![Version](https://img.shields.io/badge/Version-0.3.0-green)
 
 [中文版](https://raw.githubusercontent.com/kendryte/Kendryte-dev-extension/master/README.md)
 

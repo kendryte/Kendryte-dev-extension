@@ -174,7 +174,7 @@ function getMemoryRange(range: string) {
 	}
 	range = range.replace(/\s+/g, '').toLowerCase()
 	let index
-	if ((index = range.indexOf('+')) != -1) {
+	if ((index = range.indexOf('+')) !== -1) {
 		const from = range.substr(0, index)
 		let length = range.substr(index + 1)
 		if (!memoryLocationRegex.exec(from)) {

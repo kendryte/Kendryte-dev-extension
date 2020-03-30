@@ -22,7 +22,7 @@ const HomePage = (props: any) => {
                 <img src={kendryteLogo} alt="logo" />
                 <div className="homepage-main-version">
                     Current version
-                    <span>0.1.0</span>
+                    <span>0.3.0</span>
                 </div>
                 <div className="homepage-main-quickaccess">
                     <div className="accesses">

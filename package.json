@@ -16,7 +16,7 @@
     "canaan"
   ],
   "publisher": "Kendryte",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "engines": {
     "vscode": "^1.40.0"
   },
@@ -36,7 +36,9 @@
         "url": "./resources/schema.json"
       }
     ],
-    "extensionPack": ["ms-vscode.cpptools"],
+    "extensionPack": [
+      "ms-vscode.cpptools"
+    ],
     "configuration": [
       {
         "title": "k210-openocd",
@@ -329,7 +331,7 @@
     ]
   },
   "scripts": {
-    "postinstall": "./node_modules/.bin/electron-rebuild --version 6.0.0 && node ./node_modules/vscode/bin/install",
+    "postinstall": "./node_modules/.bin/electron-rebuild --version 7.0.0",
     "vscode:prepublish": "webpack --mode production && node scripts/build.js",
     "compile": "tsc -p src/tsconfig.json",
     "test": "node ./build/test/runTest.js",
@@ -353,7 +355,7 @@
     "@types/react": "^16.9.7",
     "@types/react-dom": "^16.9.2",
     "@types/react-router-dom": "^5.1.0",
-    "@types/serialport": "^7.0.4",
+    "@types/serialport": "^8.0.0",
     "@types/split2": "^2.1.6",
     "@typescript-eslint/eslint-plugin": "^2.7.0",
     "@typescript-eslint/parser": "^2.7.0",
@@ -365,7 +367,7 @@
     "babel-preset-react-app": "^9.0.2",
     "case-sensitive-paths-webpack-plugin": "^2.2.0",
     "css-loader": "^2.1.1",
-    "electron-rebuild": "^1.8.6",
+    "electron-rebuild": "^1.10.1",
     "eslint": "^6.5.1",
     "eslint-config-react-app": "^5.0.2",
     "eslint-loader": "^3.0.2",
@@ -406,8 +408,8 @@
   "dependencies": {
     "7zip-bin": "^5.0.3",
     "7zip-bin-wrapper": "^1.0.10",
-    "@serialport/binding-mock": "^2.0.3",
-    "@serialport/bindings": "^2.0.2",
+    "@serialport/binding-mock": "^8.0.6",
+    "@serialport/bindings": "^8.0.7",
     "@svgr/webpack": "4.3.2",
     "adm-zip": "^0.4.13",
     "axios": "^0.19.0",
@@ -446,7 +448,7 @@
     "resolve": "1.12.0",
     "resolve-url-loader": "3.1.0",
     "semver": "6.3.0",
-    "serialport": "^7.1.5",
+    "serialport": "^8.0.7",
     "source-map-loader": "^0.2.1",
     "style-loader": "1.0.0",
     "sudo-prompt": "^9.1.1",
@@ -532,5 +534,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "resolutions": {
+    "serialport": "^8.0.7"
   }
 }
