@@ -13,10 +13,10 @@ export const pickDevice = (devicesService: Devices): vscode.Disposable => {
             quickPick.items = devices.map((portInfo): vscode.QuickPickItem => {
                 return {
                     // label: portInfo.manufacturer ? `${portInfo.comName}: ${portInfo.manufacturer}` : portInfo.comName,
-                    label: portInfo.comName,
+                    label: portInfo.path,
                     description: portInfo.serialNumber || portInfo.productId,
                     detail: portInfo.pnpId,
-                    picked: portInfo.comName === devicesService.device,
+                    picked: portInfo.path === devicesService.device,
                 }
             })
             if (quickPick.items.length === 0) {
