@@ -16,7 +16,7 @@
     "canaan"
   ],
   "publisher": "Kendryte",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "engines": {
     "vscode": "^1.45.1"
   },
