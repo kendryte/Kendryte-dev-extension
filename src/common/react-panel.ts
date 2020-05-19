@@ -89,7 +89,7 @@ export class ReactPanel {
 		const mainStyle = manifest.files['main.css']
 
 		const stylePathOnDisk = vscode.Uri.file(path.join(this._extensionPath, 'build/react-views', mainStyle))
-		const styleUri = stylePathOnDisk.with({ scheme: 'vscode-resource' })
+		const styleUri = this._panel.webview.asWebviewUri(stylePathOnDisk)
 
 		// Use a nonce to whitelist which scripts can be run
 		const nonce = getNonce()
@@ -110,7 +110,7 @@ export class ReactPanel {
 				<meta name="theme-color" content="#000000">
 				<title>Kendryte</title>
 				<link rel="stylesheet" type="text/css" href="${styleUri}">
-				<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src vscode-resource: https:; script-src https: 'nonce-${nonce}'; style-src vscode-resource: 'unsafe-inline' https: data:; connect-src https:">
+				<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src ${this._panel.webview.cspSource} https:; script-src https: 'nonce-${nonce}'; style-src ${this._panel.webview.cspSource} 'unsafe-inline' https: data:; connect-src https:">
 				<base href="${vscode.Uri.file(path.join(this._extensionPath, 'build/react-views')).with({ scheme: 'vscode-resource' })}/">
 			</head>
 
@@ -131,7 +131,7 @@ export class ReactPanel {
 		})
 		return entryFiles.map((file: string) => {
 			const scriptPathOnDisk = vscode.Uri.file(path.join(this._extensionPath, 'build/react-views', file))
-			const scriptUri = scriptPathOnDisk.with({ scheme: 'vscode-resource' })
+			const scriptUri = this._panel.webview.asWebviewUri(scriptPathOnDisk)
 			return scriptUri
 		})
 	} 

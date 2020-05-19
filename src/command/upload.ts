@@ -87,8 +87,8 @@ export const buildAndUpload = (context: vscode.ExtensionContext, deviceServices:
 
         uploadLogger.show()
 
-        const Unixargs = ['-b', '2000000', '-p', <string>deviceServices.device, `${reader.name}.kfpkg`]
-        const windowsArgs = [join(process.env.packagePath || '', 'kflash\\kflash.py'), '-b', '2000000', '-p', <string>deviceServices.device, `${reader.name}.kfpkg`]
+        const Unixargs = ['-b', '2000000', '-p', deviceServices.device as string, `${reader.name}.kfpkg`]
+        const windowsArgs = [join(process.env.packagePath || '', 'kflash\\kflash.py'), '-b', '2000000', '-p', deviceServices.device as string, `${reader.name}.kfpkg`]
         const windowsExec = 'python'
 
         // Stop serialport service when upload
@@ -108,7 +108,7 @@ export const buildAndUpload = (context: vscode.ExtensionContext, deviceServices:
 
         sdkProcess.on('close', (code) => {
             uploadLogger.info('Upload finished.')
-            deviceServices.setDevice(<string>deviceServices.device)
+            deviceServices.setDevice(deviceServices.device as string)
             console.log(`子进程退出，退出码 ${code}`)
         })
     })

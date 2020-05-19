@@ -12,7 +12,6 @@ export const pickDevice = (devicesService: Devices): vscode.Disposable => {
             console.log(devices)
             quickPick.items = devices.map((portInfo): vscode.QuickPickItem => {
                 return {
-                    // label: portInfo.manufacturer ? `${portInfo.comName}: ${portInfo.manufacturer}` : portInfo.comName,
                     label: portInfo.path,
                     description: portInfo.serialNumber || portInfo.productId,
                     detail: portInfo.pnpId,

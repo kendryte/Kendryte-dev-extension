@@ -19,6 +19,8 @@
 
 首先安装 [VSCode](https://code.visualstudio.com/)。安装完毕后在 VSCode Extension 中搜索 Kendryte， 即可快速安装本插件。本插件目前仅支持 Kendryte 官方开发板 KD233。
 
+[Python 3.4.4](https://www.python.org/downloads/release/python-344/)
+
 ### MacOS 环境准备
 
 1.安装 Homebrew

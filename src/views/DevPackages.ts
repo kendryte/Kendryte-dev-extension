@@ -13,7 +13,7 @@ export class DevPackages implements vscode.TreeDataProvider<Dependency> {
 
 	refresh(): void {
 		console.log('refresh')
-		this._onDidChangeTreeData.fire();
+		this._onDidChangeTreeData.fire(undefined);
 	}
 
 	getTreeItem(element: Dependency): vscode.TreeItem {
